@@ -48,7 +48,7 @@ export function AnimatedBackground() {
         this.baseY = Math.random() * canvas.height;
         this.x = this.baseX;
         this.y = this.baseY;
-        
+
         // 创建大小层次：小、中、大
         const sizeType = Math.random();
         if (sizeType < 0.6) {
@@ -67,7 +67,7 @@ export function AnimatedBackground() {
           this.opacity = Math.random() * 0.16 + 0.12;
           this.layer = 3;
         }
-        
+
         this.speedX = (Math.random() - 0.5) * 0.5;
         this.speedY = (Math.random() - 0.5) * 0.5;
         this.pulsePhase = Math.random() * Math.PI * 2;
@@ -89,7 +89,7 @@ export function AnimatedBackground() {
         const dx = mouseX - this.baseX;
         const dy = mouseY - this.baseY;
         const distance = Math.sqrt(dx * dx + dy * dy);
-        
+
         if (distance < 200) {
           const force = (200 - distance) / 200;
           this.x = this.baseX + (dx * force * 0.05);
@@ -119,7 +119,7 @@ export function AnimatedBackground() {
           this.y,
           this.size * pulse
         );
-        
+
         gradient.addColorStop(0, `rgba(147, 197, 253, ${currentOpacity * 1.2})`);
         gradient.addColorStop(0.3, `rgba(96, 165, 250, ${currentOpacity * 0.8})`);
         gradient.addColorStop(0.6, `rgba(59, 130, 246, ${currentOpacity * 0.4})`);
@@ -155,7 +155,7 @@ export function AnimatedBackground() {
 
           if (distance < 250) {
             const opacity = (1 - distance / 250) * 0.5;
-            
+
             // 创建渐变线条
             const gradient = ctx.createLinearGradient(
               particles[i].x,
@@ -166,7 +166,7 @@ export function AnimatedBackground() {
             gradient.addColorStop(0, `rgba(96, 165, 250, ${opacity})`);
             gradient.addColorStop(0.5, `rgba(59, 130, 246, ${opacity * 1.2})`);
             gradient.addColorStop(1, `rgba(96, 165, 250, ${opacity})`);
-            
+
             ctx.strokeStyle = gradient;
             ctx.lineWidth = 1.2;
             ctx.beginPath();
@@ -184,7 +184,7 @@ export function AnimatedBackground() {
 
       particles.forEach((particle) => {
         particle.update();
-        particle.draw();
+        // particle.draw(); // 隐藏点(泡泡)，只保留线条
       });
 
       drawLines();
