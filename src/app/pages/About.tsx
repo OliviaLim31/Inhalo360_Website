@@ -1,7 +1,7 @@
 import { motion } from 'motion/react';
-import { 
-  AlertCircle, CheckCircle2, Users, Mail, Phone, 
-  GraduationCap, Briefcase, XCircle, Clock, Activity 
+import {
+  AlertCircle, CheckCircle2, Users, Mail, Phone,
+  GraduationCap, Briefcase, XCircle, Clock, Activity
 } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { Card, CardContent } from '../components/ui/card';
@@ -41,7 +41,7 @@ export function About() {
     <div className="min-h-screen bg-gradient-to-b from-white/20 to-gray-50/30 font-['Lora']">
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -55,7 +55,7 @@ export function About() {
 
           {/* ================= 问题与图片区 ================= */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-20 items-center">
-            
+
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -66,7 +66,7 @@ export function About() {
               <h2 className="text-4xl text-gray-900 font-['Playfair_Display'] font-bold mb-8 flex items-center  color: 'from-purple-500 to-pink-500'">
                 <AlertCircle className="w-10 h-10 text-red-500 mr-4" />
                 The Core Challenges
-                
+
               </h2>
 
               <Card className="border-red-100 shadow-sm hover:shadow-md transition-shadow bg-white overflow-hidden group">
@@ -80,7 +80,7 @@ export function About() {
                     <p className="text-gray-600 leading-relaxed text-sm md:text-base">
                       <strong className="text-gray-800">70-90%</strong> of patients use inhalers incorrectly, making critical errors that reduce medication efficacy by <strong className="text-gray-800">up to 50%</strong>, with similar or higher rates observed in Southeast Asian countries.
                     </p>
-                    <p className="text-xs text-gray-400 mt-2 italic">(Source: Bosnic-Anticevich et al., 2018)</p>
+
                   </div>
                 </CardContent>
               </Card>
@@ -96,7 +96,6 @@ export function About() {
                     <p className="text-gray-600 leading-relaxed text-sm md:text-base">
                       Current education methods are inadequate. Patients forget <strong className="text-gray-800">40-80%</strong> of techniques within hours, and existing resources provide <strong className="text-gray-800">no real-time feedback</strong> during actual use.
                     </p>
-                    <p className="text-xs text-gray-400 mt-2 italic">(Source: Kessels, 2003)</p>
                   </div>
                 </CardContent>
               </Card>
@@ -112,7 +111,6 @@ export function About() {
                     <p className="text-gray-600 leading-relaxed text-sm md:text-base">
                       No accessible solution exists to provide <strong className="text-gray-800">continuous support</strong>, verify correct technique at home, or deliver individual learning needs, particularly in multilingual contexts.
                     </p>
-                    <p className="text-xs text-gray-400 mt-2 italic">(Source: Yeh & Tsai, 2022)</p>
                   </div>
                 </CardContent>
               </Card>
@@ -145,7 +143,7 @@ export function About() {
           >
             <div className="bg-gradient-to-br from-blue-600 to-indigo-800 rounded-2xl p-12 text-white shadow-xl relative overflow-hidden">
               <div className="absolute top-0 right-0 -mt-16 -mr-16 w-64 h-64 bg-white opacity-5 rounded-full blur-3xl"></div>
-              
+
               <div className="flex items-center mb-8 relative z-10">
                 <div className="bg-white/20 p-3 rounded-full mr-5 backdrop-blur-sm">
                   <CheckCircle2 className="w-8 h-8" />
@@ -176,7 +174,7 @@ export function About() {
           </motion.div>
 
           {/* ================= 团队介绍区 ================= */}
-          
+
           <div className="text-center mb-12">
             <Users className="w-12 h-12 text-blue-600 mx-auto mb-4" />
             <h2 className="text-4xl font-['Playfair_Display'] font-bold text-gray-900 mb-4">
@@ -244,12 +242,12 @@ export function About() {
                 >
                   <Card className="border-gray-100 bg-white hover:border-blue-200 hover:shadow-xl transition-all duration-300 group text-center h-full flex flex-col">
                     <CardContent className="p-6 flex-1 flex flex-col">
-                      
+
                       {/* 头像区域 */}
                       <div className="relative mx-auto mb-5">
                         <div className="absolute inset-0 bg-blue-100 rounded-full blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                        <img 
-                          src={`https://ui-avatars.com/api/?name=${encodeURIComponent(member.name.replace(/[^a-zA-Z\s]/g, ''))}&background=random&color=fff&size=128&bold=true`} 
+                        <img
+                          src={`https://ui-avatars.com/api/?name=${encodeURIComponent(member.name.replace(/[^a-zA-Z\s]/g, ''))}&background=random&color=fff&size=128&bold=true`}
                           alt={member.name}
                           className="relative w-28 h-28 rounded-full border-4 border-white shadow-md group-hover:shadow-lg transition-all duration-300"
                         />
@@ -259,14 +257,14 @@ export function About() {
                       <h4 className="text-[1.15rem] font-bold text-gray-900 mb-3 leading-tight group-hover:text-blue-600 transition-colors duration-300">
                         {member.name}
                       </h4>
-                      
+
                       {/* 🔥 UI/UX 升级：职位字体变大 (text-sm)，常驻渐变色匹配参考图 */}
                       <div className="mb-5">
                         <span className="inline-block px-5 py-1.5 bg-gradient-to-r from-blue-600 to-cyan-500 text-white text-sm font-bold tracking-wide rounded-full shadow-md">
                           {member.role}
                         </span>
                       </div>
-                      
+
                       {/* 底部联系方式，推到底部对齐 */}
                       <div className="flex justify-center space-x-3 mt-auto pt-4 border-t border-gray-100/80">
                         <a href={`mailto:${member.email}`} className="p-2.5 text-gray-400 hover:text-blue-600 hover:bg-blue-50 rounded-full transition-all duration-200" title={`Email ${member.name}`}>

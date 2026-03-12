@@ -26,6 +26,39 @@ export function Training() {
             </p>
           </motion.div>
 
+          {/* ── YouTube Tutorial Video ─────────────────────────────── */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="mb-16"
+          >
+            <div className="flex items-center mb-6">
+              <svg className="w-8 h-8 text-red-500 mr-3" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/>
+              </svg>
+              <h2 className="text-3xl text-gray-900">
+                MDI Inhaler Tutorial Video
+              </h2>
+            </div>
+
+            <div className="relative w-full rounded-2xl overflow-hidden shadow-2xl border border-gray-200" style={{ paddingBottom: '56.25%' }}>
+              <iframe
+                className="absolute inset-0 w-full h-full"
+                src="https://www.youtube.com/embed/C9UOnS0n23o?si=HHA1N34D5Z-Kl_uY&rel=0&modestbranding=1"
+                title="MDI Inhaler Tutorial"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              />
+            </div>
+
+            <p className="mt-4 text-gray-500 text-sm text-center">
+              Watch the full inhaler tutorial before starting the AR guided session below.
+            </p>
+          </motion.div>
+
+          {/* ── AR Camera Section ──────────────────────────────────── */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
